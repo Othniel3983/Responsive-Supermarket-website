@@ -1,0 +1,136 @@
+html {
+    font-size: 65.5%;
+}
+
+body {
+    background: #041702;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+
+}
+
+.container {
+    background: white;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+a {
+    font-size: larger;
+    font-weight: 800;
+    color: #c43104;
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.5);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 10rem;
+    margin-right: 5rem;
+}
+
+.nav__item {
+    padding: 0.5rem 2rem
+}
+
+.nav__item > a {
+    color: #666463;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.nav__item > a:hover {
+    color: black;
+    text-decoration: #c43104;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+}
+
+.input {
+    border: 2px solid #4f4e4d;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 0.5rem 4rem 0.5rem 4.5rem;
+    width: 200px;
+    transition: transform 0.5s ease-in;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666463;
+    z-index: 2;
+}
+
+.input:hover {
+    transform: scale(1.1);
+}
+
+.icon-container {
+    background: #f5a30a;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: relative;
+    margin-left: 5rem;
+    transition: transform 0.5s ease-out;
+}
+
+.icon-white {
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    border-radius: 5px;
+    height: 38px;
+    width: 120px;
+    border: 0;
+    background: #0f5213;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    outline: 0;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 8rem;
+    transition: transform 0.5s ease-in;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
