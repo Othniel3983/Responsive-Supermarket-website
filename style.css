@@ -182,9 +182,11 @@ a:hover {
     position: relative;
 }
 
+/* Adjust grid layout to prevent hero-image from affecting other elements */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    position: relative; /* Create positioning context */
 }
 
 .content-1 {
@@ -236,9 +238,12 @@ a:hover {
     width: 120px;
     height: 140px;
     border-radius: 10px;
-    position: absolute;
-    right: 20px;
-    top: 380px;
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    right: 5rem; /* Adjust as needed */
+    top: 75%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    max-width: 100%;
+    height: auto;
 }
 
 .baner-image {
@@ -251,6 +256,7 @@ a:hover {
     left: 500px;
     top: 470px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);
+    z-index: 10; /* Higher z-index to appear on top */
 }
 
 h3 {
@@ -288,4 +294,3 @@ h3 {
     padding: 0;
     margin: 0;
 }
-
