@@ -349,4 +349,76 @@ h3 {
     line-height: 2.5;
 }
 
+/* Feature section buttons with inline icons */
+.feature-container .feature-content button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem; /* space between icon and text */
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: solid 2px #0f5213;
+    background: #fff;
+    color: #0f5213;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+}
+
+.feature-content h6 {
+    color: red;
+    margin-bottom: 0.5rem;
+    padding-left: 5rem;
+}
+
+.feature-content h2 {
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    padding-left: 5rem;
+    line-height: 1.2;
+}
+
+.feature-content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #4f4e4d;
+    padding-left: 5rem;
+}
+
+/* Feature section: equal grid columns and image fill */
+.feature-container {
+    align-items: stretch; /* make both columns equal height */
+    column-gap: 2rem;
+    padding: 2rem 5rem;
+}
+
+.feature-content {
+    align-self: stretch; /* match image column height */
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill its grid cell while preserving aspect */
+    display: block;
+    border-radius: 10px;
+    align-self: stretch; /* fill row height */
+    justify-self: stretch; /* fill column width */
+    transition: transform 0.5s ease-in-out;
+}
+
+.feature-image:hover {
+    transform: scale(1.05);
+}
+
+/* Optional: ensure a sensible minimum height so the image has space to fill */
+.feature-container {
+    min-height: 360px;
+}
+
     
