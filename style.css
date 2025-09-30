@@ -483,4 +483,95 @@ h3 {
     transition: transform 0.5s ease-in-out;
 }
 
+
+.discount-container1 {
+    background: #fff; /* or just #fff */
+    width: 100%;
+    height: auto;
+    padding: 2rem;          /* reveals wrapper background */
+    margin: 0;      /* align with page gutters */
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.discount-container2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;  /* image gets more space */
+    background: #094a01;               /* visible against wrapper */
+    border-radius: 10px;
+    width: 70%;                        /* not 80rem (won’t overflow wrapper) */
+    min-height: 360px;                  /* gives actual height */
+    column-gap: 2rem;
+    padding: 0;                    /* reveals inner bg around content */
+    margin: 0;                          /* remove extra offsets */
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discount__image {
+    width: 100%;
+    max-width: none;        /* allow full column width */
+    justify-self: stretch;  /* fill grid column horizontally */
+    align-self: stretch;     /* fill grid row vertically */
+}
+
+.discount__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* fill area; may crop edges */
+    display: block;
+}
+
+/* Make discount-container1 full-width within feature-container without right gap */
+.discount-container1 {
+    grid-column: 1 / -1;       /* span all grid columns */
+    justify-self: stretch;
+    position: relative;
+    left: -5rem;               /* cancel parent left padding */
+    width: calc(100% + 10rem); /* add both side paddings back */
+    margin: 0;
+    padding: 2rem 5rem;        /* keep inner gutters */
+    box-sizing: border-box;
+}
+
+
+.discount__content {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 2rem;
+}
+.discount__content h6 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.discount__content p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.discount__content .discount_percentage {
+    color: #bf9d02;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 6vw, 4.2rem);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.discount__content .discount_percentage .off {
+    color: #fff;
+}
+
+.discount__content .btn-2 {
+    margin-left: 0; /* reset left margin */
+}
     
