@@ -1,0 +1,311 @@
+@media screen and (max-width: 1350px) {
+    .header {
+        flex-wrap: wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .nav__list {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+
+    .nav__item {
+        padding: 0 1rem;
+    }
+
+    .icon-container {
+        display: none;
+    }
+
+    .search-container {
+        display: block;
+        max-width: 400px;
+        margin-left: 0;
+        box-sizing: border-box;
+        margin-top: 1rem;
+        padding: 0 1rem;
+        object-fit: fill;
+
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .btn {
+        margin-left: 16rem;
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Force all grid sections to a single column */
+    .grid,
+    .discount-container2 {
+        grid-template-columns: 1fr !important;
+        justify-items: center;
+        align-items: center;
+    }
+
+    /* Ensure all direct children span and center within the single column */
+    .grid > *,
+    .discount-container2 > * {
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;   /* force center for block elements */
+        margin-right: auto;
+        padding-left: 0 !important;  /* strip leftover horizontal paddings */
+        padding-right: 0 !important;
+    }
+
+    /* Ensure images center as blocks */
+    .grid img,
+    .discount-container2 img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Remove large left paddings/margins that break centering */
+    .content-1,
+    .content-2,
+    .btn-2 {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .showcase-content {
+        padding-right: 0; /* remove asymmetry so centering works */
+        padding-left: 0;
+    }
+
+    .feature-container {
+        padding-left: 1rem;  /* slimmer, balanced padding */
+        padding-right: 1rem;
+    }
+
+    .feature-content h6,
+    .feature-content h2,
+    .feature-content p {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-container .feature-content button {
+        margin-left: 0; /* was 5rem on desktop */
+    }
+
+    /* Items container: remove negative margins and balance padding */
+    .items-container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Center discount section on small screens */
+    .discount-container1 {
+        position: static;      /* remove left offset behavior */
+        left: auto;
+        width: 100%;
+        margin: 0;             /* no horizontal shift */
+        padding-left: 1rem;    /* balanced inner padding */
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+    .discount-container2 {
+        width: 100% !important;    /* fill wrapper width */
+        margin-left: auto;         /* center horizontally */
+        margin-right: auto;
+        grid-template-columns: 1fr; /* single column on small screens */
+    }
+
+    /* Center discount image wrapper and image */
+    .discount__image {
+        justify-self: center;
+        align-self: center;
+        width: auto;
+        max-width: 90%;
+    }
+    .discount__image img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto; /* avoid forced stretching */
+        object-fit: contain;
+    }
+
+    /* Center the entire showcase content cell */
+    .showcase-container-2 { justify-items: center; }
+    .showcase-content {
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Remove desktop-only right padding on heading */
+    .showcase-content > h2 { padding-right: 0; }
+
+    /* Center paragraphs and tighten spacing */
+    .showcase-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Center the list block; keep bullets aligned nicely */
+    .showcase-content > ul {
+        list-style: disc inside;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block; /* center as a block within centered parent */
+        text-align: left;       /* keep list text aligned */
+    }
+
+    /* Fix hero images positioning on small screens */
+    .baner-image,
+    .hero-image-2 {
+        position: static !important;   /* remove absolute positioning */
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;                   /* responsive width */
+        max-width: 420px;              /* prevent overgrowing */
+        height: auto;
+        margin: 1rem auto 0;           /* center horizontally */
+        justify-self: center;          /* center in grid cell */
+    }
+
+    /* Remove desktop-only left margin on hero main image */
+    .hero-image { margin-left: 0; }
+
+    /* Stack hero container vertically so we can order children */
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Within the hero article (grid), show hero-image first, then hero-image-2 */
+    .grid .hero-image { order: 1; }
+    .grid .hero-image-2 { order: 2; }
+
+    /* Place banner image after the article content */
+    .hero-container .baner-image { order: 3; }
+
+    /* Resize images for smaller screens */
+    .hero-image {
+        width: 85%;
+        max-width: 360px;
+        height: auto;
+        margin: 1rem auto 0;
+    }
+    .hero-image-2,
+    .baner-image {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+        margin: 1rem auto 0;
+        display: block;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Show the grid first (contains hero images), then banner image after */
+    .hero-container .grid { order: 1; }
+    .hero-container .baner-image { order: 2; }
+
+    /* Within the grid, show hero-image-2 above hero-image */
+    .grid .hero-image-2 { order: 1; }
+    .grid .hero-image { order: 2; }
+
+    /* Sizes remain */
+    .hero-image {
+        width: 85%;
+        max-width: 360px;
+        height: auto;
+        margin: 1rem auto 0;
+    }
+    .hero-image-2,
+    .baner-image {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+        margin: 1rem auto 0;
+        display: block;
+    }
+
+    .content-1 {
+        margin-top: 0;
+    }
+    /* Flatten grid so its children can be ordered alongside banner */
+    .hero-container { display: flex; flex-direction: column; align-items: center; }
+    .hero-container .grid { display: contents; }
+
+    /* Order: text first, then hero-image-2, then banner, then hero-image */
+    .grid_1 { order: 0; }
+    .hero-image-2 { order: 1; }
+    .baner-image { order: 2; }
+    .hero-image { order: 3; }
+
+    /* Footer: center text and place image below texts */
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .footer_content {
+        order: 1;
+        justify-self: center;
+        text-align: center;
+        width: 100%;
+        max-width: 600px; /* keep readable line length */
+    }
+    .footer_image {
+        order: 2;
+        justify-self: center;
+    }
+
+    /* Footer text centering: override left alignment and start justification */
+    .footer_content {
+        text-align: center !important;
+        justify-self: center !important;
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* Footer input/button layout and spacing */
+    .footer_content .input-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem; /* space between input and button */
+    }
+    .footer_content .footer_input {
+        width: min(100%, 320px);
+    }
+}
