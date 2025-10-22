@@ -8,13 +8,14 @@
       src="https://kit.fontawesome.com/20ac4f8d02.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/css/normalize.css"/>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/media_queries.css" />
   </head>
   <body>
     <header class="container">
-      <div class="header">
+      <div class="header" data-aos="fade-down">
         <a href="#">Fresh</a>
         <nav class="nav">
           <ul class="nav__list">
@@ -36,9 +37,9 @@
         </div>
       </div>
       <section class="hero-container">
-        <img class="baner-image" src="/images/Untitled-5.jpg" alt="" />
+        <img class="baner-image" src="/images/Untitled-5.jpg" alt="" data-aos="fade" />
         <article class="grid">
-          <div class="grid_1">
+          <div class="grid_1" data-aos="fade-right">
             <h1 class="content-1">Make healthy life with fresh grocery</h1>
             <p class="content-2">
               Get the best quality and most delicious grocery food in the world,
@@ -46,12 +47,12 @@
             </p>
             <a href="#"><button class="btn-2">Shop Now</button></a>
           </div>
-          <img src="/images/Untitled-6.png" alt="" class="hero-image-2" />
-          <img src="/images/hero-image.png.png" alt="" class="hero-image" />
+          <img src="/images/Untitled-6.png" alt="" class="hero-image-2" data-aos="fade"/>
+          <img src="/images/hero-image.png.png" alt="" class="hero-image" data-aos="fade" />
         </article>
       </section>
-      <h3>Top Categories</h3>
-      <div class="showcase-container">
+      <h3 data-aos="fade-up">Top Categories</h3>
+      <div class="showcase-container" data-aos="fade-up">
         <ul>
           <li class="showcase_image">
             <a href="#"><img src="/images/Untitled-1.jpg" alt="" /></a>
@@ -68,10 +69,10 @@
         </ul>
       </div>
       <section class="grid showcase-container-2">
-        <div class="showcase-vegetables">
+        <div class="showcase-vegetables" data-aos="slide-right">
           <img src="/images/Vegetables.png" alt="" />
         </div>
-        <div class="showcase-content">
+        <div class="showcase-content" data-aos="slide-left">
           <h6>SHOWCASE</h6>
           <h2>Best quality grocery just for you.</h2>
           <p>We prioitize quality in each of our grocery.</p>
@@ -84,7 +85,7 @@
         </div>
       </section>
       <section class="grid feature-container">
-        <div class="feature-content">
+        <div class="feature-content" data-aos="fade-up-right">
           <h6>FEATURE</h6>
           <h2>Why should you use our service?</h2>
           <p>
@@ -109,11 +110,11 @@
             </button>
           </div>
         </div>
-        <img src="/images/chef-image.png" alt="" class="feature-image" />
+        <img src="/images/chef-image.png" alt="" class="feature-image" data-aos="fade-up-left" />
         <section class="items-container">
-          <h6>Our items</h6>
-          <p>Always healthy grocery in our grocery shop.</p>
-          <div class="card-container">
+          <h6 data-aos="slide-right">Our items</h6>
+          <p data-aos="slide-right">Always healthy grocery in our grocery shop.</p>
+          <div class="card-container" data-aos="flip-up">
             <div class="card">
               <header class="card__header">
                 <img
@@ -210,7 +211,7 @@
           </div>
         </section>
         <section class="discount-container1">
-          <div class="discount-container2">
+          <div class="discount-container2" data-aos="fade-up">
             <div class="discount__image">
               <img src="/images/spilled vegetables.png" alt="" />
             </div>
@@ -228,7 +229,7 @@
           </div>
         </section>
       </section>
-      <footer class="footer">
+      <footer class="footer" data-aos="slide-up">
         <div class="footer_image">
           <img src="/images/footer_image.png" alt="" />
         </div>
@@ -256,5 +257,9 @@
           </span>
       </footer>
     </header>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
